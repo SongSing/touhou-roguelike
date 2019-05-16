@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moth", "moth\moth.csproj", "{877D82B3-1128-49B0-ABD7-5C24D57B4CAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{877D82B3-1128-49B0-ABD7-5C24D57B4CAB}.Debug|x86.ActiveCfg = Debug|x86
+		{877D82B3-1128-49B0-ABD7-5C24D57B4CAB}.Debug|x86.Build.0 = Debug|x86
+		{877D82B3-1128-49B0-ABD7-5C24D57B4CAB}.Release|x86.ActiveCfg = Release|x86
+		{877D82B3-1128-49B0-ABD7-5C24D57B4CAB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70F93D4C-6C23-4F01-8271-1CD52531EED9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<enemy>
+  <sprite>0</sprite>
+  <position>384,64</position>
+  <spawnTime>0</spawnTime>
+  
+  <bullet repeat="500">
+    <sprite>0</sprite>
+    <hitbox>
+      <position>32,32</position>
+      <radius>5</radius>
+    </hitbox>
+    <duration>infinity</duration>
+
+    <behavior type="BehaviorLinear">
+      <angle>180</angle>
+      <speed>2.2</speed>
+    </behavior>
+  </bullet>
+</enemy>
+

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<enemy
+  sprite="0"
+  position="384,64"
+  spawnTime="0">
+
+  <bullet
+    phase="1"
+    type="ring"
+    poolSize="100"
+    offset="01"
+    repeat="500"
+    sprite="0"
+    hitboxRadius="5"
+    hitboxPosition="32,32"
+    spawnPosition="0,0"
+    spawnPositionType="relative"
+    duration="infinity">
+
+    <numBullets>5</numBullets>
+    <angle delta="12" min="140" max="220" behavior="bounce">180</angle>
+    <speed>4</speed>
+    <diameter>72</diameter>
+    <spinSpeed>1</spinSpeed>
+    <spinDirection>1</spinDirection>
+
+  </bullet>
+
+</enemy>
+

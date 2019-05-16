@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bullet>
+  <sprite>0</sprite>
+  <hitbox>
+    <position>32,32</position>
+    <radius>5</radius>
+  </hitbox>
+  <duration>infinity</duration>
+
+  <behavior id="orbit1" type="BehaviorOrbit">
+    <orbitRadius name="orbitR">20</orbitRadius>
+    <orbitSpeed>0.7</orbitSpeed>
+  </behavior>
+
+  <behavior type="BehaviorLinear">
+    <angle>180</angle>
+    <speed>2</speed>
+  </behavior>
+  
+</bullet>

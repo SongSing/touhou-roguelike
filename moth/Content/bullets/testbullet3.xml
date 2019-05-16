@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bullet>
+  <sprite>0</sprite>
+  <hitbox>
+    <position>32,32</position>
+    <radius>5</radius>
+  </hitbox>
+  <duration>infinity</duration>
+
+  <behavior type="BehaviorOrbit">
+    <orbitRadius>20</orbitRadius>
+    <orbitSpeed>0.7</orbitSpeed>
+  </behavior>
+
+  <behavior type="BehaviorLinear">
+    <angle>180</angle>
+    <speed>2.4</speed>
+  </behavior>
+
+</bullet>
+
