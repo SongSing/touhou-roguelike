@@ -165,6 +165,18 @@ namespace moth
             this.hitboxes.Add(name, hitbox);
         }
 
+        public Hitbox GetHitbox(string name)
+        {
+            if (this.hitboxes.ContainsKey(name))
+            {
+                return this.hitboxes[name];
+            }
+            else
+            {
+                throw new Exception("Hitbox doesn't exist: " + name);
+            }
+        }
+
         public T GetHitbox<T>(string name) where T : Hitbox
         {
             if (this.hitboxes.ContainsKey(name))
@@ -175,6 +187,11 @@ namespace moth
             {
                 throw new Exception("Hitbox doesn't exist: " + name);
             }
+        }
+
+        public void SetHitbox(string name, Hitbox hitbox)
+        {
+            this.hitboxes[name] = hitbox;
         }
 
         public IEnumerable<Hitbox> Hitboxes

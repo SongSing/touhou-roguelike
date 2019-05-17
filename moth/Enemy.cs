@@ -50,6 +50,17 @@ namespace moth
             }
         }*/
 
+        private IEnumerable<BulletPool> activePools
+        {
+            get
+            {
+                foreach (BulletPool pool in this.bulletPoolMatrix[this.currentPhase])
+                {
+                    yield return pool;
+                }
+            }
+        }
+
         protected override void InternalUpdate(GameTime gameTime)
         {
             if (this.spawnTime > 0)
@@ -65,7 +76,7 @@ namespace moth
             {
                 base.InternalUpdate(gameTime);
                 
-                foreach (BulletPool pool in this.bulletPoolMatrix[this.currentPhase])
+                foreach (BulletPool pool in this.activePools)
                 {
                     pool.Update(gameTime);
                 }
@@ -80,7 +91,7 @@ namespace moth
             {
                 base.InternalDraw(spriteBatch);
 
-                foreach (BulletPool pool in this.bulletPoolMatrix[this.currentPhase])
+                foreach (BulletPool pool in this.activePools)
                 {
                     pool.Draw(spriteBatch);
                 }
@@ -97,6 +108,24 @@ namespace moth
             }
 
             this.currentPhase = 0;
+        }
+
+        public bool IsDamaging(Sprite sprite)
+        {
+            // test touching here
+
+            foreach (BulletPool pool in this.activePools)
+            {
+                foreach (Bullet bullet in pool.ActiveSprites)
+                {
+                    if (bullet.Intersects("hitbox", sprite, "hitbox"))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public void LoadFromFile(string filename)
@@ -211,7 +240,7 @@ namespace moth
 
                     bullet.CurrentAnimation.CurrentFrame = bulletSpriteIndex;
                     bullet.GetHitbox<CircleHitbox>("hitbox").Radius = bulletRadius;
-                    bullet.GetHitbox<CircleHitbox>("hitbox").Position = bulletHitboxPosition;
+                    bullet.GetHitbox<CircleHitbox>("hitbox").LocalPosition = bulletHitboxPosition;
 
                     if (bulletDuration == "infinity")
                     {

@@ -41,8 +41,13 @@ namespace moth
         protected override void InternalUpdate(GameTime gameTime)
         {
             this.player.Update(gameTime);
-
+            
             this.testEnemy.Update(gameTime);
+           
+            if (this.testEnemy.IsDamaging(this.player))
+            {
+                Console.WriteLine("ded");
+            }
         }
 
         protected override void InternalDraw(SpriteBatch spriteBatch)

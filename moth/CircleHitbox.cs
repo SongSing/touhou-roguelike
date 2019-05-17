@@ -13,14 +13,14 @@ namespace moth
     class CircleHitbox : Hitbox
     {
         public float Radius;
-        private Vector2 localPosition;
+        public Vector2 LocalPosition;
         private Sprite followSprite = null;
 
         public CircleHitbox(Sprite follow, Vector2 localPosition, float radius)
         {
             this.followSprite = follow;
             this.Radius = radius;
-            this.localPosition = localPosition;
+            this.LocalPosition = localPosition;
         }
 
         public override void Update(GameTime gameTime)
@@ -31,11 +31,11 @@ namespace moth
         {
             get
             {
-                return this.localPosition + this.followSprite.TopLeftPosition;
+                return this.LocalPosition + this.followSprite.TopLeftPosition;
             }
             set
             {
-                this.localPosition = value - this.followSprite.TopLeftPosition;
+                this.LocalPosition = value - this.followSprite.TopLeftPosition;
             }
         }
 

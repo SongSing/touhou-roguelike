@@ -20,10 +20,10 @@ namespace moth
         private float shootCounter = 0;
         private bool canShoot = true;
 
-        private readonly Vector2 hitboxPosition = new Vector2(64, 76);
-        private readonly float hitboxR = 5.0f;
+        private readonly Vector2 hitboxPosition = new Vector2(32, 37);
+        private readonly float hitboxR = 3.0f;
 
-        public override Point SpriteSize => new Point(128, 128);
+        public override Point SpriteSize => new Point(64, 64);
 
         public bool IsFocused => AKS.IsKeyDown(Root.KeyDefs.Focus);
 
@@ -36,9 +36,9 @@ namespace moth
 
             this.BulletPool = new BulletPool(this, 5000);
 
-            this.Scale = 0.5f;
+            //this.Scale = 0.5f;
 
-            this.initialPosition = new Vector2(this.ParentScene.Bounds.Width / 2, this.ParentScene.Bounds.Height * 3 / 4);
+            this.initialPosition = new Vector2(this.ParentScene.Bounds.Width / 2 - this.SpriteSize.X / 2 + this.hitboxPosition.X, this.ParentScene.Bounds.Height * 3 / 4);
             this.Position = this.initialPosition;
         }
 

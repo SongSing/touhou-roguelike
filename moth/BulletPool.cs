@@ -65,7 +65,7 @@ namespace moth
                     b.Behavior = DeltaBehavior.Bounce;
                     break;
                 case "stop":
-                    b.Behavior = DeltaBehavior.Bounce;
+                    b.Behavior = DeltaBehavior.Stop;
                     break;
             }
 

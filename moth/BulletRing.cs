@@ -49,6 +49,8 @@ namespace moth
                     this.bullets[i] = new BulletStationary();
                     this.bullets[i].LoadContent();
                     this.bullets[i].Initialize(parentScene, this);
+                    this.bullets[i].CurrentAnimation.CurrentFrame = this.CurrentAnimation.CurrentFrame;
+                    this.bullets[i].SetHitbox("hitbox", this.GetHitbox("hitbox"));
                 }
 
                 this.isInitialized = true;
